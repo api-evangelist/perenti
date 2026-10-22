@@ -1,0 +1,5 @@
+generated: '2026-10-22'
+method: none
+name: Perenti packages
+note: No first-party SDK, client library or CLI found. Checked registry.npmjs.org/perenti (404), registry.npmjs.org/idoba (404), npm search "perenti" (0 results), pypi.org/pypi/perenti (404), pypi.org/pypi/idoba (404), GitHub orgs perenti and idoba (404). Perenti publishes no developer documentation or API on www.perenti.com.
+packages: []

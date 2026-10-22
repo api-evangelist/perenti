@@ -1,0 +1,40 @@
+name: Perenti MCP server (WordPress MCP Adapter on www.perenti.com)
+type: MCPServer
+generated: '2026-10-22'
+method: probed
+source: https://www.perenti.com/.well-known/oauth-protected-resource
+status: observed-gated
+description: >-
+  www.perenti.com is a WordPress site. Its OAuth protected-resource metadata
+  (/.well-known/oauth-protected-resource, HTTP 200 JSON) advertises the resource
+  https://www.perenti.com/wp-json/mcp/mcp-oauth-server with authorization server
+  https://www.perenti.com, bearer header auth and scope "mcp". The public WordPress
+  REST index (/wp-json/, HTTP 200) lists an `mcp` namespace with routes
+  /mcp/mcp-oauth-server and /mcp/mcp-adapter-default-server (methods POST, GET, DELETE),
+  plus a `wp-abilities/v1` namespace, which is the shape of the WordPress MCP Adapter
+  plugin. Both MCP routes answer an unauthenticated GET with HTTP 401. Perenti publishes
+  no documentation for this server and no tool list; no tools/list was attempted
+  because the endpoint requires authentication. This appears to be a site-plugin
+  surface rather than a documented developer product.
+deployment:
+  mode: remote
+  endpoint: https://www.perenti.com/wp-json/mcp/mcp-oauth-server
+  auth: oauth
+  verified: probed
+evidence:
+- url: https://www.perenti.com/.well-known/oauth-protected-resource
+  status: 200
+  finding: resource https://www.perenti.com/wp-json/mcp/mcp-oauth-server, scopes_supported [mcp], bearer_methods_supported [header]
+- url: https://www.perenti.com/wp-json/mcp
+  status: 200
+  finding: routes /mcp/mcp-oauth-server and /mcp/mcp-adapter-default-server
+- url: https://www.perenti.com/wp-json/mcp/mcp-oauth-server
+  status: 401
+  finding: '{"code":"mcp_unauthorized","message":"MCP authentication required."}'
+- url: https://www.perenti.com/wp-json/mcp/mcp-adapter-default-server
+  status: 401
+  finding: '{"code":"rest_forbidden"}'
+other_endpoints:
+- https://www.perenti.com/wp-json/mcp/mcp-adapter-default-server
+tools: []
+tools_note: No documented tool list and the server is OAuth-gated; tools are unknown.

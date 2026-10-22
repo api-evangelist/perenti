@@ -1,0 +1,61 @@
+generated: '2026-10-22'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 4
+  own: 3
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - other
+  - website
+hosts:
+- host: api.perenti.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: perenti.com
+  role: api
+  relation: own
+- host: au.linkedin.com
+  found_by:
+  - pointer
+  types:
+  - LinkedIn
+  serves: []
+  registrable_domain: linkedin.com
+  role: other
+  relation: platform
+- host: perenti.com
+  found_by:
+  - probed
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: perenti.com
+  role: other
+  relation: own
+- host: www.perenti.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Website
+  - About
+  - Contact
+  - Newsroom
+  - Careers
+  - Investors
+  - PrivacyPolicy
+  - Disclaimer
+  serves: []
+  registrable_domain: perenti.com
+  role: website
+  relation: own

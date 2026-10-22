@@ -1,23 +1,106 @@
 aid: perenti
+
 name: Perenti
-description: 'Perenti is a company surfaced via the API Evangelist harvest backlog (source: australia-apidays-2026)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Perenti (ASX-listed, www.perenti.com) describes itself as a leading global diversified mining services
+  group with interests in contract mining, drilling services, mining services and technology solutions. From origins
+  in Kalgoorlie in the 1980s it has grown into one of the largest mining services companies in the world, offering
+  surface and underground hard-rock mining, drilling, equipment supply and procurement, and mining technology (including
+  the idoba software business, e.g. idoba.sim and idoba.predict) with a workforce of about 10,000 across four continents.
+  No public developer portal, API documentation or API contract was found on its site. Surfaced via the API Evangelist
+  harvest backlog (source: australia-apidays-2026).'
+
 url: https://raw.githubusercontent.com/api-evangelist/perenti/refs/heads/main/apis.yml
+
+image: https://www.perenti.com/wp-content/uploads/2025/09/HOME-1024x348.jpg
+
 x-type: company
+
 x-source: harvest:australia-apidays-2026
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-22'
+
 modified: '2026-10-22'
+
 tags:
 - Company
-apis: []
+- Mining
+- Mining Services
+- Contract Mining
+- Drilling
+- Underground Mining
+- Mining Technology
+- Australia
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: WellKnown
+  url: well-known/perenti-well-known.yml
+- type: Hosts
+  url: hosts/perenti-hosts.yml
+- type: DomainSecurity
+  url: security/perenti-domain-security.yml
 - type: Website
-  url: https://perenti.com/
+  url: https://www.perenti.com/
+- type: About
+  url: https://www.perenti.com/about/our-story/
+- type: Contact
+  url: https://www.perenti.com/contact/
+- type: Newsroom
+  url: https://www.perenti.com/news-media/
+- type: Careers
+  url: https://www.perenti.com/careers/
+- type: Investors
+  url: https://www.perenti.com/investors/
+- type: PrivacyPolicy
+  url: https://www.perenti.com/privacy-statement/
+- type: Disclaimer
+  url: https://www.perenti.com/disclaimer/
+- type: LinkedIn
+  url: https://au.linkedin.com/company/perenti
+
+apis: []
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: Website verified as Perenti's own site (title "Global Diversified Contract Mining Services Group | Perenti").
+    perenti.com redirects to www.perenti.com. No developer portal, documentation, API reference, pricing, signup, GitHub
+    org, status page or Postman workspace is published on the site; those pointers are honestly absent.
+  evidence:
+  - url: https://perenti.com/
+    status: 200
+  - url: https://www.perenti.com/
+    status: 200
+  - url: https://www.perenti.com/about/our-story/
+    status: 200
+  - url: https://www.perenti.com/contact/
+    status: 200
+  - url: https://www.perenti.com/news-media/
+    status: 200
+  - url: https://www.perenti.com/careers/
+    status: 200
+  - url: https://www.perenti.com/investors/
+    status: 200
+  - url: https://www.perenti.com/privacy-statement/
+    status: 200
+  - url: https://www.perenti.com/disclaimer/
+    status: 200
+  - url: https://au.linkedin.com/company/perenti
+    status: 200
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 10
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

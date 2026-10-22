@@ -1,0 +1,100 @@
+generated: '2026-10-22'
+method: searched
+probe: true
+source:
+- https://www.perenti.com/privacy-statement/
+- https://www.perenti.com/wp-content/uploads/2025/09/250924-Perenti-Privacy-Statement.pdf
+note: >-
+  The HTML page https://www.perenti.com/privacy-statement/ (HTTP 200) is a landing page that links to the
+  full Perenti Privacy Statement PDF (HTTP 200, 12 pages, includes an EU Addendum "current as of 22 September
+  2025"). All quotes below are from that PDF's text; PDF line wraps have been joined with single spaces.
+  The cookies policy PDF (HTTP 200) and /disclaimer/ (HTTP 200) were also read and add no posture signal.
+  Perenti is a mining services group, not an API provider; no AI, accessibility, SBOM, transparency-report or
+  support-lifetime language was found on these pages, so those signals are not recorded.
+signals:
+  data_subject_request:
+    url: https://www.perenti.com/wp-content/uploads/2025/09/250924-Perenti-Privacy-Statement.pdf
+    section: '1.12 Requesting access to your personal information'
+    channel: privacyofficer@perentigroup.com (Privacy Officer, +61 8 9321 6520, as given in the cookies policy)
+    stated_sla: generally within 30 days
+    rights_named: [access, correction, complaint, 'EU: copy, deletion, restriction, stop marketing, portability, objection']
+    escalation: Office of the Australian Information Commissioner (OAIC); in the EU, the local data protection regulator
+    evidence:
+    - source: https://www.perenti.com/wp-content/uploads/2025/09/250924-Perenti-Privacy-Statement.pdf
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        You can request access to your personal information by contacting our Privacy Officer using the contact
+        details below. We will consider all such requests and provide our response within a reasonable period,
+        which is generally within 30 days following receipt of your request.
+    - source: https://www.perenti.com/wp-content/uploads/2025/09/250924-Perenti-Privacy-Statement.pdf
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        Right to delete your information. You have a right to ask us to delete any personal information which we
+        are holding about you in certain specific circumstances.
+    - source: https://www.perenti.com/wp-content/uploads/2025/09/250924-Perenti-Privacy-Statement.pdf
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        If you are not happy with our response to your query or complaint, you can make a written complaint to
+        the Office of the Australian Information Commissioner at:
+    note: >-
+      Access and correction are offered to everyone via the Privacy Officer with a "generally within 30 days"
+      response target; deletion, restriction, portability and objection are stated as additional rights for
+      people based in the EU (section 2.7 of the EU Addendum). The statement also notes the Australian Privacy
+      Principles may not apply to employee records (section 1.10).
+  data_residency:
+    url: https://www.perenti.com/wp-content/uploads/2025/09/250924-Perenti-Privacy-Statement.pdf
+    section: '1.8 Where we may transfer your personal information'
+    evidence:
+    - source: https://www.perenti.com/wp-content/uploads/2025/09/250924-Perenti-Privacy-Statement.pdf
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        Your personal information may be used, stored and/or accessed by staff operating outside of your country
+        of residence working for any member of the Group or its suppliers.
+    - source: https://www.perenti.com/wp-content/uploads/2025/09/250924-Perenti-Privacy-Statement.pdf
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        in the case of entities based in other countries outside the EEA, entering into European Commission
+        approved standard contractual arrangements with them.
+    note: >-
+      No residency commitment: the statement discloses cross-border access and names ~30 destination countries
+      (including Australia, China, India, the United States, the United Kingdom and EU member states). For EU
+      data it names standard contractual clauses (and still references the EU-US Privacy Shield) as transfer
+      safeguards (section 2.8).
+  data_retention:
+    url: https://www.perenti.com/wp-content/uploads/2025/09/250924-Perenti-Privacy-Statement.pdf
+    section: '2.6 How long we store your personal information'
+    evidence:
+    - source: https://www.perenti.com/wp-content/uploads/2025/09/250924-Perenti-Privacy-Statement.pdf
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        We keep your personal information for no longer than necessary for the purposes for which the personal
+        information is processed. The length of time for which we retain personal information depends on the
+        purposes for which we collect and use it and/or as required to comply with applicable laws and to
+        establish, exercise or defend our legal rights.
+    note: Purpose-limited retention with no stated periods, in the EU Addendum.
+  subprocessors:
+    url: https://www.perenti.com/wp-content/uploads/2025/09/250924-Perenti-Privacy-Statement.pdf
+    section: '1.7 How and why we share your personal information with others'
+    evidence:
+    - source: https://www.perenti.com/wp-content/uploads/2025/09/250924-Perenti-Privacy-Statement.pdf
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        Our IT service providers who may access personal information stored within their respective solutions
+        when providing support and maintenance.
+    - source: https://www.perenti.com/wp-content/uploads/2025/09/250924-Perenti-Privacy-Statement.pdf
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        Perenti takes reasonable steps to ensure that the suppliers, service providers and subcontractors who may
+        handle personal information in the course of providing services to us do so in accordance with
+        applicable laws.
+    note: >-
+      Only categories of recipients are disclosed (suppliers, IT service providers, JV partners); no named
+      subprocessor list was found. EU residents may ask who the recipients are (section 2.7).

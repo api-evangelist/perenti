@@ -1,0 +1,20 @@
+generated: '2026-10-22'
+method: none
+source:
+- https://zapier.com/apps/perenti/integrations
+- https://n8n.io/integrations/perenti/
+- https://composio.dev/toolkits/perenti
+- https://monid.ai/tools/perenti
+checked:
+- https://www.perenti.com/
+- https://zapier.com/apps/perenti/integrations
+- https://www.make.com/en/integrations/perenti
+- https://n8n.io/integrations/perenti/
+- https://composio.dev/toolkits/perenti
+- https://monid.ai/tools/perenti
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
+note: Perenti is a mining services group with no published API, developer portal or integrations page. Zapier returned
+  500 and Make returned 403 (inconclusive); n8n returned 404. No partner edges recorded.
